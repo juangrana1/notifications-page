@@ -1,4 +1,4 @@
-import "./main.css";
+import "./main.scss";
 
 import Image1 from './assets/images/avatar-mark-webber.webp';
 import Image2 from './assets/images/avatar-angela-gray.webp';
