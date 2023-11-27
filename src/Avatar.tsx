@@ -1,11 +1,12 @@
-function Avatar(props: {avatar:string, name:string, isMessage?:boolean}) {
+function Avatar(props: { avatar: string; name: string; isMessage?: boolean }) {
+
   return (
     <img
-        src={props.avatar}
-        alt={`${props.name} avatar`}
-        className={`avatar ${props.isMessage ? 'avatar--private-message' : ''}`}
-      />
-  )
+      src={`${props.avatar}`}
+      alt={`${props.name} avatar`}
+      className={`avatar ${props.isMessage ? "avatar--private-message" : ""}`}
+    />
+  );
 }
 
-export default Avatar
+export default Avatar;

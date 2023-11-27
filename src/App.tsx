@@ -1,5 +1,16 @@
 import "./main.css";
 
+import Image1 from './assets/images/avatar-mark-webber.webp';
+import Image2 from './assets/images/avatar-angela-gray.webp';
+import Image3 from './assets/images/avatar-jacob-thompson.webp';
+import Image4 from './assets/images/avatar-rizky-hasanuddin.webp';
+import Image5 from './assets/images/avatar-kimberly-smith.webp';
+import Image6 from './assets/images/avatar-nathan-peterson.webp';
+import Image7 from './assets/images/avatar-anna-kim.webp';
+import ImageChess from './assets/images/image-chess.webp';
+
+
+
 import Notification from "./Notification";
 import Avatar from "./Avatar";
 
@@ -9,8 +20,6 @@ interface isUnread {
   unread: boolean;
   read: boolean;
 }
-
-const imagesPath = './assets/images/';
 
 function App() {
   const [isUnread, setIsUnread] = useState<isUnread>({
@@ -44,7 +53,7 @@ function App() {
         <main className="notifications">
           <div className={`notifications__notification-box ${isUnread.unread ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar=""
+              avatar={Image1}
               name="Mark Webber"
             />
             <Notification
@@ -53,13 +62,12 @@ function App() {
               name="Mark Webber"
               type="reaction"
               time="1m ago"
-              avatar={`${imagesPath}avatar-mark-webber.webp`}
               target="My first tournament today!"
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.unread ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-angela-gray.webp"
+              avatar={Image2}
               name="Angela Gray"
             />
             <Notification
@@ -67,13 +75,12 @@ function App() {
               unread={isUnread.unread}
               name="Angela Gray"
               type="follow"
-              avatar={`${imagesPath}avatar-angela-gray.webp`}
               time="5m ago"
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.unread ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-jacob-thompson.webp"
+              avatar={Image3}
               name="Jacob Thompson"
             />
             <Notification
@@ -82,13 +89,12 @@ function App() {
               name="Jacob Thompson"
               type="join-group"
               time="1 day ago"
-              avatar={`${imagesPath}avatar-jacob-thompson.webp`}
               target="Chess Club"
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.read ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-rizky-hasanuddin.webp"
+              avatar={Image4}
               name="Rizky Hasanuddin"
               isMessage={true}
             />
@@ -98,13 +104,12 @@ function App() {
               name="Rizky Hasanuddin"
               type="private-message"
               time="5 days ago"
-              avatar={`${imagesPath}avatar-rizky-hasanuddin.webp`}
               target="Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.read ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-kimberly-smith.webp"
+              avatar={Image5}
               name="Kimberly Smith"
             />
             <Notification
@@ -113,13 +118,12 @@ function App() {
               name="Kimberly Smith"
               type="comment-picture"
               time="1 week ago"
-              avatar={`${imagesPath}avatar-kimberly-smith.webp`}
-              target={`${imagesPath}image-chess.webp`}
+              target={ImageChess}
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.read ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-nathan-peterson.webp"
+              avatar={Image6}
               name="Nathan Peterson"
             />
             <Notification
@@ -128,13 +132,12 @@ function App() {
               name="Nathan Peterson"
               type="reaction"
               time="2 weeks ago"
-              avatar={`${imagesPath}avatar-nathan-peterson.webp`}
               target="5 end-game strategies to increase your win rate"
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.read ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-anna-kim.webp"
+              avatar={Image7}
               name="Anna Kim"
             />
             <Notification
@@ -143,7 +146,6 @@ function App() {
               name="Anna Kim"
               type="left-group"
               time="2 weeks ago"
-              avatar={`${imagesPath}avatar-anna-kim.webp`}
               target="Chess Club"
             />
           </div>

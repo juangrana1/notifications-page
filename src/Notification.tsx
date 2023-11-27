@@ -6,7 +6,6 @@ function Notification(props: {
   name: string;
   type: string;
   time: string;
-  avatar: string;
   target?: string;
 }) {
   const [isMessageAccessed, setIsMessageAccessed] = useState<boolean>(false);
