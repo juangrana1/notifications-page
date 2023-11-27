@@ -10,6 +10,8 @@ interface isUnread {
   read: boolean;
 }
 
+const imagesPath = './assets/images/';
+
 function App() {
   const [isUnread, setIsUnread] = useState<isUnread>({
     unread: true,
@@ -42,7 +44,7 @@ function App() {
         <main className="notifications">
           <div className={`notifications__notification-box ${isUnread.unread ? 'notifications__notification-box--unread' : ''}`}>
             <Avatar
-              avatar="/src/assets/images/avatar-mark-webber.webp"
+              avatar=""
               name="Mark Webber"
             />
             <Notification
@@ -51,7 +53,7 @@ function App() {
               name="Mark Webber"
               type="reaction"
               time="1m ago"
-              avatar="/src/assets/images/avatar-mark-webber.webp"
+              avatar={`${imagesPath}avatar-mark-webber.webp`}
               target="My first tournament today!"
             />
           </div>
@@ -65,7 +67,7 @@ function App() {
               unread={isUnread.unread}
               name="Angela Gray"
               type="follow"
-              avatar="/src/assets/images/avatar-angela-gray.webp"
+              avatar={`${imagesPath}avatar-angela-gray.webp`}
               time="5m ago"
             />
           </div>
@@ -80,7 +82,7 @@ function App() {
               name="Jacob Thompson"
               type="join-group"
               time="1 day ago"
-              avatar="/src/assets/images/avatar-jacob-thompson.webp"
+              avatar={`${imagesPath}avatar-jacob-thompson.webp`}
               target="Chess Club"
             />
           </div>
@@ -96,7 +98,7 @@ function App() {
               name="Rizky Hasanuddin"
               type="private-message"
               time="5 days ago"
-              avatar="/src/assets/images/avatar-rizky-hasanuddin.webp"
+              avatar={`${imagesPath}avatar-rizky-hasanuddin.webp`}
               target="Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
             />
           </div>
@@ -111,8 +113,8 @@ function App() {
               name="Kimberly Smith"
               type="comment-picture"
               time="1 week ago"
-              avatar="/src/assets/images/avatar-kimberly-smith.webp"
-              target="/src/assets/images/image-chess.webp"
+              avatar={`${imagesPath}avatar-kimberly-smith.webp`}
+              target={`${imagesPath}image-chess.webp`}
             />
           </div>
           <div className={`notifications__notification-box ${isUnread.read ? 'notifications__notification-box--unread' : ''}`}>
@@ -126,7 +128,7 @@ function App() {
               name="Nathan Peterson"
               type="reaction"
               time="2 weeks ago"
-              avatar="/src/assets/images/avatar-nathan-peterson.webp"
+              avatar={`${imagesPath}avatar-nathan-peterson.webp`}
               target="5 end-game strategies to increase your win rate"
             />
           </div>
@@ -141,7 +143,7 @@ function App() {
               name="Anna Kim"
               type="left-group"
               time="2 weeks ago"
-              avatar="/src/assets/images/avatar-anna-kim.webp"
+              avatar={`${imagesPath}avatar-anna-kim.webp`}
               target="Chess Club"
             />
           </div>
