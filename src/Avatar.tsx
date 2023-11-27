@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Avatar(props: {avatar:string, name:string, isMessage?:boolean}) {
   return (
     <img
