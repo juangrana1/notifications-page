@@ -1,0 +1,9 @@
+.avatar {
+    @include imageSize;
+    margin-left: 1rem;
+
+    &--private-message {
+        align-self: flex-start;
+        margin-top: .8rem;
+    }
+}

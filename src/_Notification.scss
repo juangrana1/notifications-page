@@ -1,0 +1,82 @@
+.notification {
+  padding: 1rem;
+  &__text {
+    position: relative;
+
+    &__name {
+      font-weight: 800;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-blue;
+      }
+    }
+
+    &__message {
+      color: $color-d-grayish-blue;
+    }
+  }
+
+  &__point {
+    display: inline-flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $color-red;
+    margin-bottom: 2px;
+    margin-left: 5px;
+  }
+
+  &__time {
+    color: $color-grayish-blue;
+  }
+
+  &__target-box {
+    display: inline;
+
+    cursor: pointer;
+
+    &--private-message {
+      display: inline-block;
+      border: 1px solid $color-l-grayish-blue-2;
+      margin-top: 0.5rem;
+      background-color: $color-l-grayish-blue-1;
+      border-radius: 4px;
+    }
+
+    &__target {
+      color: $color-d-grayish-blue;
+      font-weight: 800;
+
+      &--accessed-message {
+        background-color: $color-white;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $color-blue;
+      }
+
+      &--private-message {
+        font-weight: 500;
+        padding: 1rem;
+        display: block;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-d-grayish-blue;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include imageSize;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+  }
+}

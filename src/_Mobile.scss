@@ -1,0 +1,20 @@
+@media (max-width: 375px) {
+  html {
+    font-size: 90%;
+  }
+
+  .container {
+    margin: 0;
+    max-width: 375px;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .notification {
+    &__text {
+      &--mobile {
+        max-width: 240px;
+      }
+    }
+  }
+}

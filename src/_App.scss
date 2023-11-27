@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Plus Jakarta Sans";
+}
+
+.background {
+  background-color: $color-vl-grayish-blue;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: $color-white;
+  margin: 4rem 5.5rem;
+  max-width: 46rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &:last-of-type {
+        flex: none;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+
+    &__number-box {
+      font-weight: 800;
+      color: $color-white;
+      background-color: $color-blue;
+      padding: 2px 11px;
+      border-radius: 6px;
+    }
+
+    &__mark-as-read {
+        flex-shrink: 0;
+        color: $color-d-grayish-blue;
+
+        &:hover {
+            cursor: pointer;
+            color: $color-blue;
+        }
+    }
+  }
+}
+
+.notifications {
+
+  &__notification-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: .75rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--unread {
+      background-color: $color-vl-grayish-blue;
+    }
+  }
+}
